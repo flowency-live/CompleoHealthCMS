@@ -1,0 +1,50 @@
+{
+  "kind": "singleType",
+  "collectionName": "homes",
+  "info": {
+    "singularName": "home",
+    "pluralName": "homes",
+    "displayName": "Home"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Hero": {
+      "type": "component",
+      "component": "sections.hero",
+      "repeatable": true
+    },
+    "ValueProposition": {
+      "type": "component",
+      "component": "sections.home-value-proposition",
+      "repeatable": false
+    },
+    "Approach": {
+      "type": "component",
+      "component": "sections.home-approaches",
+      "repeatable": true
+    },
+    "HealthcareSolutions": {
+      "type": "component",
+      "component": "sections.home-solutions",
+      "repeatable": false
+    },
+    "Testimonials": {
+      "type": "component",
+      "component": "sections.home-testimonials",
+      "repeatable": false
+    },
+    "LocationMap": {
+      "type": "component",
+      "component": "sections.home-location-map",
+      "repeatable": false
+    },
+    "CurvedCTA": {
+      "type": "component",
+      "component": "sections.home-curved-cta",
+      "repeatable": false
+    }
+  }
+}

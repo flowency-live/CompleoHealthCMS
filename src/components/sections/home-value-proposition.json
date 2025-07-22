@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_sections_home_value_propositions",
+  "info": {
+    "displayName": "Home_ValueProposition"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "text"
+    },
+    "ValuePropositionCards": {
+      "type": "component",
+      "component": "cards.value-cards",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

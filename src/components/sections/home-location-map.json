@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_sections_home_location_map",
+  "info": {
+    "displayName": "Home_LocationMap",
+    "description": "Location map section configuration"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "European Coverage",
+      "required": true
+    },
+    "subtitle": {
+      "type": "text",
+      "default": "Our advanced imaging services are available across the UK and expanding into Europe.",
+      "required": false
+    }
+  }
+}

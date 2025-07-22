@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_content_impact_statistics",
+  "info": {
+    "displayName": "ImpactStatistic"
+  },
+  "options": {},
+  "attributes": {
+    "statId": {
+      "type": "string"
+    },
+    "value": {
+      "type": "string"
+    },
+    "label": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

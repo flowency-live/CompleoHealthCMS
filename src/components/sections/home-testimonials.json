@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_sections_home_testimonials",
+  "info": {
+    "displayName": "Home_Testimonials",
+    "description": "Testimonials section configuration"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Trusted by Healthcare Leaders and Patients",
+      "required": true
+    },
+    "subtitle": {
+      "type": "text",
+      "default": "See how Compleo Health is transforming diagnostic imaging across the NHS and private sector.",
+      "required": false
+    }
+  }
+}

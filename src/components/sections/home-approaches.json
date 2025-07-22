@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_sections_home_approaches",
+  "info": {
+    "displayName": "Home_Approaches"
+  },
+  "options": {},
+  "attributes": {
+    "ApproachPanel": {
+      "type": "component",
+      "component": "cards.approach-cards",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}
