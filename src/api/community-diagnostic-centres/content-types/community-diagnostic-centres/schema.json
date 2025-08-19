@@ -1,0 +1,69 @@
+{
+  "kind": "singleType",
+  "collectionName": "community_diagnostic_centres_pages",
+  "info": {
+    "singularName": "community-diagnostic-centres",
+    "pluralName": "community-diagnostic-centres-pages",
+    "displayName": "Community Diagnostic Centres Page",
+    "description": "CMS content for the Community Diagnostic Centres service page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heroTitle": {
+      "type": "string",
+      "required": true,
+      "default": "Community Diagnostic Centres"
+    },
+    "heroSubtitle": {
+      "type": "text",
+      "required": true,
+      "default": "Comprehensive and efficient diagnostic facilities for improved patient access and effective clinical pathways."
+    },
+    "primaryButton": {
+      "type": "component",
+      "repeatable": false,
+      "component": "buttons.button",
+      "required": true
+    },
+    "secondaryButton": {
+      "type": "component",
+      "repeatable": false,
+      "component": "buttons.button",
+      "required": true
+    },
+    "serviceDetailsTitle": {
+      "type": "string",
+      "required": true,
+      "default": "Accessible Community Healthcare"
+    },
+    "serviceDetailsDescription": {
+      "type": "text",
+      "required": true
+    },
+    "serviceImage": {
+      "type": "string",
+      "required": true
+    },
+    "serviceImageAlt": {
+      "type": "string",
+      "required": true
+    },
+    "features": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.service-feature",
+      "required": true,
+      "min": 4,
+      "max": 4
+    },
+    "ctaSection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sections.curved-pill-cta",
+      "required": true
+    }
+  }
+}

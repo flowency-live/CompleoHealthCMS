@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_global_impact_statistics",
+  "info": {
+    "displayName": "Impact Statistic",
+    "description": "Individual impact statistic with statId, value, and label - used within Impact Statistic Groups"
+  },
+  "options": {},
+  "attributes": {
+    "statId": {
+      "type": "string",
+      "required": true
+    },
+    "value": {
+      "type": "string",
+      "required": true
+    },
+    "label": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,42 @@
+{
+  "collectionName": "components_elements_buttons",
+  "info": {
+    "displayName": "Button",
+    "description": "A button component with text, link and icon"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string",
+      "required": true
+    },
+    "subtext": {
+      "type": "string",
+      "required": false
+    },
+    "href": {
+      "type": "string",
+      "required": true
+    },
+    "icon": {
+      "type": "enumeration",
+      "enum": [
+        "settings",
+        "shield",
+        "clock",
+        "handshake",
+        "pound",
+        "cpu",
+        "users",
+        "trending-up",
+        "stethoscope",
+        "message-square"
+      ],
+      "required": false
+    },
+    "analytics": {
+      "type": "string",
+      "required": false
+    }
+  }
+}

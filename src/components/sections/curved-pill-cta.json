@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_sections_curved_pill_ctas",
+  "info": {
+    "displayName": "CurvedPill_CTA"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "primaryButton_text": {
+      "type": "string"
+    },
+    "primaryButton_Href": {
+      "type": "string"
+    },
+    "secondaryButton_text": {
+      "type": "string"
+    },
+    "secondaryButton_Href": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

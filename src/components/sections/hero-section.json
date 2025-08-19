@@ -1,0 +1,48 @@
+{
+  "collectionName": "components_sections_hero_sections",
+  "info": {
+    "displayName": "Hero Section",
+    "description": "Hero section for pages"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "subtitle": {
+      "type": "text",
+      "required": true
+    },
+    "button1": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.button",
+      "required": false
+    },
+    "button2": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.button",
+      "required": false
+    },
+    "backgroundImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "backgroundColor": {
+      "type": "string",
+      "default": "compleo-deep-teal",
+      "required": true
+    },
+    "textColor": {
+      "type": "string",
+      "default": "white",
+      "required": true
+    }
+  }
+}

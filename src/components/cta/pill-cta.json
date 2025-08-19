@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_cta_pill_ctas",
+  "info": {
+    "displayName": "Pill CTA",
+    "description": "Pill-style CTA component"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Stay Connected"
+    },
+    "description": {
+      "type": "text",
+      "default": "Follow Compleo Health on LinkedIn for the latest updates, industry insights, and company news."
+    },
+    "primaryButton_text": {
+      "type": "string",
+      "default": "Follow Us on LinkedIn"
+    },
+    "primaryButton_action": {
+      "type": "string",
+      "default": "https://www.linkedin.com/company/compleohealth"
+    }
+  }
+}

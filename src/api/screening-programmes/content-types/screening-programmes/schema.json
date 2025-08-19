@@ -1,0 +1,69 @@
+{
+  "kind": "singleType",
+  "collectionName": "screening_programmes_pages",
+  "info": {
+    "singularName": "screening-programmes",
+    "pluralName": "screening-programmes-pages",
+    "displayName": "Screening Programmes Page",
+    "description": "CMS content for the Screening Programmes service page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heroTitle": {
+      "type": "string",
+      "required": true,
+      "default": "Screening Programmes"
+    },
+    "heroSubtitle": {
+      "type": "text",
+      "required": true,
+      "default": "Quality-based screening pathways utilizing advanced technology, expert reporting and effective integration with existing services."
+    },
+    "primaryButton": {
+      "type": "component",
+      "repeatable": false,
+      "component": "buttons.button",
+      "required": true
+    },
+    "secondaryButton": {
+      "type": "component",
+      "repeatable": false,
+      "component": "buttons.button",
+      "required": true
+    },
+    "serviceDetailsTitle": {
+      "type": "string",
+      "required": true,
+      "default": "Early Detection for Better Outcomes"
+    },
+    "serviceDetailsDescription": {
+      "type": "text",
+      "required": true
+    },
+    "serviceImage": {
+      "type": "string",
+      "required": true
+    },
+    "serviceImageAlt": {
+      "type": "string",
+      "required": true
+    },
+    "features": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.service-feature",
+      "required": true,
+      "min": 4,
+      "max": 4
+    },
+    "ctaSection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sections.curved-pill-cta",
+      "required": true
+    }
+  }
+}

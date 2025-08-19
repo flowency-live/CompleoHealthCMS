@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_social_linkedin_posts",
+  "info": {
+    "displayName": "LinkedIn Post",
+    "description": "LinkedIn embed URL"
+  },
+  "options": {},
+  "attributes": {
+    "embedUrl": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

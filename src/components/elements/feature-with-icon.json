@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_elements_feature_with_icons",
+  "info": {
+    "displayName": "Feature With Icon",
+    "description": "A feature item with icon selection"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "icon": {
+      "type": "enumeration",
+      "enum": [
+        "settings",
+        "shield",
+        "clock",
+        "handshake",
+        "pound",
+        "cpu",
+        "users",
+        "trending-up",
+        "stethoscope",
+        "message-square"
+      ],
+      "required": true
+    }
+  }
+}

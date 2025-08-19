@@ -30,10 +30,8 @@
       "component": "buttons.button",
       "repeatable": false
     },
-    "ImpactStatistics": {
-      "type": "component",
-      "component": "content.impact-statistic-group",
-      "repeatable": false
+    "impactStatsTitle": {
+      "type": "string"
     }
   },
   "config": {}

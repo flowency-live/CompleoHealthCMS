@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_initiatives_sustainability_initiatives",
+  "info": {
+    "displayName": "Sustainability Initiative"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "text": {
+      "type": "text",
+      "required": true
+    },
+    "impact": {
+      "type": "text",
+      "required": true
+    }
+  },
+  "config": {}
+}

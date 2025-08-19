@@ -1,0 +1,55 @@
+{
+  "kind": "singleType",
+  "collectionName": "services_pages",
+  "info": {
+    "singularName": "services-page",
+    "pluralName": "services-pages",
+    "displayName": "Services Page",
+    "description": "Content for the main services listing page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heroContent": {
+      "type": "component",
+      "component": "sections.hero",
+      "repeatable": false,
+      "required": true
+    },
+    "sectionTitle": {
+      "type": "string",
+      "default": "Our Services",
+      "required": true
+    },
+    "sectionDescription": {
+      "type": "text",
+      "default": "From managed equipment services to mobile imaging units, we provide comprehensive solutions tailored to your specific needs.",
+      "required": true
+    },
+    "services": {
+      "type": "component",
+      "component": "cards.value-cards",
+      "repeatable": true
+    },
+    "PillText": {
+      "type": "string"
+    },
+    "ApproachFeatures": {
+      "type": "component",
+      "component": "content.approach-bullets",
+      "repeatable": true
+    },
+    "impactStatsTitle": {
+      "type": "string",
+      "default": "Our Impact",
+      "required": true
+    },
+    "CurvedPill_CTA": {
+      "type": "component",
+      "component": "sections.curved-pill-cta",
+      "repeatable": false
+    }
+  }
+}

@@ -1,0 +1,7 @@
+/**
+ * managed-equipment router
+ */
+
+import { factories } from '@strapi/strapi'
+
+export default factories.createCoreRouter('api::managed-equipment.managed-equipment');

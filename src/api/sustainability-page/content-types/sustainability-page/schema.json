@@ -1,0 +1,116 @@
+{
+  "kind": "singleType",
+  "collectionName": "sustainability_pages",
+  "info": {
+    "singularName": "sustainability-page",
+    "pluralName": "sustainability-pages",
+    "displayName": "Sustainability Page",
+    "description": "CMS content for the Sustainability/Social Impact page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heroTitle": {
+      "type": "string",
+      "required": true,
+      "default": "Sustainability"
+    },
+    "heroSubtitle": {
+      "type": "text",
+      "required": true,
+      "default": "Investing in the next generation of technology and the next generation in communities"
+    },
+    "primaryButton": {
+      "type": "component",
+      "repeatable": false,
+      "component": "buttons.button",
+      "required": true
+    },
+    "secondaryButton": {
+      "type": "component",
+      "repeatable": false,
+      "component": "buttons.button",
+      "required": true
+    },
+    "interestAreasTitle": {
+      "type": "string",
+      "required": true,
+      "default": "Our Areas of Interest"
+    },
+    "interestAreasDescription": {
+      "type": "text",
+      "required": true,
+      "default": "Core focus areas driving our commitment to sustainable healthcare and community impact"
+    },
+    "interestAreas": {
+      "type": "component",
+      "repeatable": true,
+      "component": "cards.interest-area",
+      "required": true,
+      "min": 3,
+      "max": 3
+    },
+    "sustainabilityInitiativesTitle": {
+      "type": "string",
+      "required": true,
+      "default": "Sustainability Initiatives"
+    },
+    "sustainabilityInitiativesDescription": {
+      "type": "text",
+      "required": true,
+      "default": "Leading the healthcare industry with next generation solutions."
+    },
+    "sustainabilityInitiatives": {
+      "type": "component",
+      "repeatable": true,
+      "component": "initiatives.sustainability-initiative",
+      "required": true,
+      "min": 3,
+      "max": 3
+    },
+    "socialImpactInitiativesTitle": {
+      "type": "string",
+      "required": true,
+      "default": "Social Impact Initiatives"
+    },
+    "socialImpactInitiativesDescription": {
+      "type": "text",
+      "required": true,
+      "default": "Investing in lasting social value through health education, community partnerships, and expanding healthcare access"
+    },
+    "socialImpactInitiatives": {
+      "type": "component",
+      "repeatable": true,
+      "component": "initiatives.social-impact-initiative",
+      "required": true,
+      "min": 3,
+      "max": 3
+    },
+    "impactCardsTitle": {
+      "type": "string",
+      "required": true,
+      "default": "Our Impact"
+    },
+    "impactCardsDescription": {
+      "type": "text",
+      "required": true,
+      "default": "Measurable results from our commitment to creating lasting positive change in communities"
+    },
+    "impactCards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "cards.impact-card",
+      "required": true,
+      "min": 3,
+      "max": 3
+    },
+    "ctaSection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sections.curved-pill-cta",
+      "required": true
+    }
+  }
+}
