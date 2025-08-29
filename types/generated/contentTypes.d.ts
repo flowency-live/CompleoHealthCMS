@@ -410,6 +410,114 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiAboutPageAboutPage extends Struct.SingleTypeSchema {
+  collectionName: 'about_pages';
+  info: {
+    description: 'Content for the About page';
+    displayName: 'About Page';
+    pluralName: 'about-pages';
+    singularName: 'about-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    companyFeatures: Schema.Attribute.Component<'content.feature-item', true> &
+      Schema.Attribute.Required;
+    companyParagraphs: Schema.Attribute.Component<
+      'content.paragraph-with-highlight',
+      true
+    > &
+      Schema.Attribute.Required;
+    companyTitle: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'About Compleo Health'>;
+    companyValues: Schema.Attribute.Component<'content.value-item', true> &
+      Schema.Attribute.Required;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    ctaButtonHref: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'/contact'>;
+    ctaButtonText: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Partner With Us'>;
+    ctaDescription: Schema.Attribute.Text &
+      Schema.Attribute.DefaultTo<'Discover how Compleo Health can transform your diagnostic imaging capabilities and improve patient outcomes.'>;
+    ctaTitle: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Ready to Partner With Us?'>;
+    heroHighlightWord: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Diagnostic Imaging'>;
+    heroPrimaryButton_href: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'/work-with-us'>;
+    heroPrimaryButton_subtext: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Our Team'>;
+    heroPrimaryButton_text: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'JOIN'>;
+    heroPrimaryButton_trackingLabel: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'JOIN Our Team - About Hero'>;
+    heroSecondaryButton_href: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'/contact'>;
+    heroSecondaryButton_subtext: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Us'>;
+    heroSecondaryButton_text: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'CONTACT'>;
+    heroSecondaryButton_trackingLabel: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'CONTACT Us - About Hero'>;
+    heroSubtitle: Schema.Attribute.Text &
+      Schema.Attribute.DefaultTo<"Since 2021, we've been revolutionising healthcare through innovative imaging solutions, passionate service delivery, and unwavering commitment to patient care.">;
+    heroTitle: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Leaders in'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::about-page.about-page'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    valuesDescription: Schema.Attribute.Text &
+      Schema.Attribute.DefaultTo<'These core values guide every decision we make and every service we deliver.'>;
+    valuesTitle: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Our Values'>;
+  };
+}
+
+export interface ApiCaseStudiesPageCaseStudiesPage
+  extends Struct.SingleTypeSchema {
+  collectionName: 'case_studies_pages';
+  info: {
+    description: 'Case studies page content';
+    displayName: 'Case Studies Page';
+    pluralName: 'case-studies-pages';
+    singularName: 'case-studies-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    Hero: Schema.Attribute.Component<'sections.hero-section', false>;
+    impactStatsTitle: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Our Impact'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::case-studies-page.case-studies-page'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    successStoriesSubtitle: Schema.Attribute.Text;
+    successStoriesTitle: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Success Stories'>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiClinicalInsourcingClinicalInsourcing
   extends Struct.SingleTypeSchema {
   collectionName: 'clinical_insourcing_pages';
@@ -874,6 +982,44 @@ export interface ApiNewsAndViewsPageNewsAndViewsPage
   };
 }
 
+export interface ApiOurTeamPageOurTeamPage extends Struct.SingleTypeSchema {
+  collectionName: 'our_team_pages';
+  info: {
+    description: 'Our Team page content';
+    displayName: 'Our Team Page';
+    pluralName: 'our-team-pages';
+    singularName: 'our-team-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    cultureDescription: Schema.Attribute.Text;
+    cultureImage: Schema.Attribute.Media<'images'>;
+    cultureImageAlt: Schema.Attribute.String;
+    cultureTitle: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Our Culture & Values'>;
+    cultureValues: Schema.Attribute.Component<'content.culture-value', true>;
+    Hero: Schema.Attribute.Component<'sections.hero-section', false>;
+    leadershipDescription: Schema.Attribute.Text;
+    leadershipTitle: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Leadership Team'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::our-team-page.our-team-page'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiScreeningProgrammesScreeningProgrammes
   extends Struct.SingleTypeSchema {
   collectionName: 'screening_programmes_pages';
@@ -1127,6 +1273,53 @@ export interface ApiSustainabilityPageSustainabilityPage
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+  };
+}
+
+export interface ApiWorkWithUsPageWorkWithUsPage
+  extends Struct.SingleTypeSchema {
+  collectionName: 'work_with_us_pages';
+  info: {
+    description: 'Work with us / careers page content';
+    displayName: 'Work With Us Page';
+    pluralName: 'work-with-us-pages';
+    singularName: 'work-with-us-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    benefitsItems: Schema.Attribute.Component<'content.benefit-item', true>;
+    benefitsSubtitle: Schema.Attribute.Text;
+    benefitsTitle: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Benefits & Perks'>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    ctaDescription: Schema.Attribute.Text;
+    ctaHeading: Schema.Attribute.String;
+    ctaPrimaryButton: Schema.Attribute.Component<'elements.button', false>;
+    ctaSecondaryButton: Schema.Attribute.Component<'elements.button', false>;
+    Hero: Schema.Attribute.Component<'sections.hero-section', false>;
+    linkedinButtonText: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'LinkedIn Careers Page'>;
+    linkedinUrl: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::work-with-us-page.work-with-us-page'
+    > &
+      Schema.Attribute.Private;
+    opportunitiesSubtitle: Schema.Attribute.Text;
+    opportunitiesTitle: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Current Opportunities'>;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    whyJoinPoints: Schema.Attribute.Component<'content.why-join-point', true>;
+    whyJoinTitle: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Why work with us?'>;
   };
 }
 
@@ -1640,6 +1833,8 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::about-page.about-page': ApiAboutPageAboutPage;
+      'api::case-studies-page.case-studies-page': ApiCaseStudiesPageCaseStudiesPage;
       'api::clinical-insourcing.clinical-insourcing': ApiClinicalInsourcingClinicalInsourcing;
       'api::community-diagnostic-centres.community-diagnostic-centres': ApiCommunityDiagnosticCentresCommunityDiagnosticCentres;
       'api::equipment-details.equipment-details': ApiEquipmentDetailsEquipmentDetails;
@@ -1648,10 +1843,12 @@ declare module '@strapi/strapi' {
       'api::home.home': ApiHomeHome;
       'api::managed-equipment.managed-equipment': ApiManagedEquipmentManagedEquipment;
       'api::news-and-views-page.news-and-views-page': ApiNewsAndViewsPageNewsAndViewsPage;
+      'api::our-team-page.our-team-page': ApiOurTeamPageOurTeamPage;
       'api::screening-programmes.screening-programmes': ApiScreeningProgrammesScreeningProgrammes;
       'api::service.service': ApiServiceService;
       'api::services-page.services-page': ApiServicesPageServicesPage;
       'api::sustainability-page.sustainability-page': ApiSustainabilityPageSustainabilityPage;
+      'api::work-with-us-page.work-with-us-page': ApiWorkWithUsPageWorkWithUsPage;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

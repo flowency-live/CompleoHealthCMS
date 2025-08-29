@@ -77,6 +77,18 @@ export interface ContentApproachBullets extends Struct.ComponentSchema {
   };
 }
 
+export interface ContentBenefitItem extends Struct.ComponentSchema {
+  collectionName: 'components_content_benefit_items';
+  info: {
+    description: 'Individual benefit with title and description (icons are static)';
+    displayName: 'Benefit Item';
+  };
+  attributes: {
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface ContentCertification extends Struct.ComponentSchema {
   collectionName: 'components_content_certifications';
   info: {
@@ -84,6 +96,30 @@ export interface ContentCertification extends Struct.ComponentSchema {
     displayName: 'Certification';
   };
   attributes: {};
+}
+
+export interface ContentCultureValue extends Struct.ComponentSchema {
+  collectionName: 'components_content_culture_values';
+  info: {
+    description: 'Individual culture value with title and description';
+    displayName: 'Culture Value';
+  };
+  attributes: {
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface ContentFeatureItem extends Struct.ComponentSchema {
+  collectionName: 'components_content_feature_items';
+  info: {
+    description: 'Feature item with icon, title and description';
+    displayName: 'Feature Item';
+  };
+  attributes: {
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
 }
 
 export interface ContentFeatures extends Struct.ComponentSchema {
@@ -104,6 +140,40 @@ export interface ContentFeaturesBullets extends Struct.ComponentSchema {
   };
   attributes: {
     text: Schema.Attribute.String;
+  };
+}
+
+export interface ContentParagraphWithHighlight extends Struct.ComponentSchema {
+  collectionName: 'components_content_paragraph_with_highlights';
+  info: {
+    description: 'Paragraph with highlighted text in the middle';
+    displayName: 'Paragraph with Highlight';
+  };
+  attributes: {
+    text: Schema.Attribute.Text & Schema.Attribute.Required;
+  };
+}
+
+export interface ContentValueItem extends Struct.ComponentSchema {
+  collectionName: 'components_content_value_items';
+  info: {
+    description: 'Company value with icon, title and description';
+    displayName: 'Value Item';
+  };
+  attributes: {
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface ContentWhyJoinPoint extends Struct.ComponentSchema {
+  collectionName: 'components_content_why_join_points';
+  info: {
+    description: 'Point explaining why to join the company (icons are static)';
+    displayName: 'Why Join Point';
+  };
+  attributes: {
+    text: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -134,20 +204,6 @@ export interface ElementsButton extends Struct.ComponentSchema {
   attributes: {
     analytics: Schema.Attribute.String;
     href: Schema.Attribute.String & Schema.Attribute.Required;
-    icon: Schema.Attribute.Enumeration<
-      [
-        'settings',
-        'shield',
-        'clock',
-        'handshake',
-        'pound',
-        'cpu',
-        'users',
-        'trending-up',
-        'stethoscope',
-        'message-square',
-      ]
-    >;
     subtext: Schema.Attribute.String;
     text: Schema.Attribute.String & Schema.Attribute.Required;
   };
@@ -589,9 +645,15 @@ declare module '@strapi/strapi' {
       'cards.interest-area': CardsInterestArea;
       'cards.value-cards': CardsValueCards;
       'content.approach-bullets': ContentApproachBullets;
+      'content.benefit-item': ContentBenefitItem;
       'content.certification': ContentCertification;
+      'content.culture-value': ContentCultureValue;
+      'content.feature-item': ContentFeatureItem;
       'content.features': ContentFeatures;
       'content.features-bullets': ContentFeaturesBullets;
+      'content.paragraph-with-highlight': ContentParagraphWithHighlight;
+      'content.value-item': ContentValueItem;
+      'content.why-join-point': ContentWhyJoinPoint;
       'cta.pill-cta': CtaPillCta;
       'elements.button': ElementsButton;
       'elements.feature-item': ElementsFeatureItem;

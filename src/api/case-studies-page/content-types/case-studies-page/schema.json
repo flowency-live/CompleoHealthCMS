@@ -1,0 +1,32 @@
+{
+  "kind": "singleType",
+  "collectionName": "case_studies_pages",
+  "info": {
+    "singularName": "case-studies-page",
+    "pluralName": "case-studies-pages",
+    "displayName": "Case Studies Page",
+    "description": "Case studies page content"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Hero": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sections.hero-section"
+    },
+    "impactStatsTitle": {
+      "type": "string",
+      "default": "Our Impact"
+    },
+    "successStoriesTitle": {
+      "type": "string",
+      "default": "Success Stories"
+    },
+    "successStoriesSubtitle": {
+      "type": "text"
+    }
+  }
+}

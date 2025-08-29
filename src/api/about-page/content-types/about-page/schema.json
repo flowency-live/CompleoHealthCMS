@@ -1,0 +1,106 @@
+{
+  "kind": "singleType",
+  "collectionName": "about_pages",
+  "info": {
+    "singularName": "about-page",
+    "pluralName": "about-pages",
+    "displayName": "About Page",
+    "description": "Content for the About page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heroTitle": {
+      "type": "string",
+      "default": "Leaders in"
+    },
+    "heroHighlightWord": {
+      "type": "string",
+      "default": "Diagnostic Imaging"
+    },
+    "heroSubtitle": {
+      "type": "text",
+      "default": "Since 2021, we've been revolutionising healthcare through innovative imaging solutions, passionate service delivery, and unwavering commitment to patient care."
+    },
+    "heroPrimaryButton_text": {
+      "type": "string",
+      "default": "JOIN"
+    },
+    "heroPrimaryButton_subtext": {
+      "type": "string",
+      "default": "Our Team"
+    },
+    "heroPrimaryButton_href": {
+      "type": "string",
+      "default": "/work-with-us"
+    },
+    "heroPrimaryButton_trackingLabel": {
+      "type": "string",
+      "default": "JOIN Our Team - About Hero"
+    },
+    "heroSecondaryButton_text": {
+      "type": "string",
+      "default": "CONTACT"
+    },
+    "heroSecondaryButton_subtext": {
+      "type": "string",
+      "default": "Us"
+    },
+    "heroSecondaryButton_href": {
+      "type": "string",
+      "default": "/contact"
+    },
+    "heroSecondaryButton_trackingLabel": {
+      "type": "string",
+      "default": "CONTACT Us - About Hero"
+    },
+    "companyTitle": {
+      "type": "string",
+      "default": "About Compleo Health"
+    },
+    "companyParagraphs": {
+      "type": "component",
+      "repeatable": true,
+      "component": "content.paragraph-with-highlight",
+      "required": true
+    },
+    "companyFeatures": {
+      "type": "component",
+      "repeatable": true,
+      "component": "content.feature-item",
+      "required": true
+    },
+    "valuesTitle": {
+      "type": "string",
+      "default": "Our Values"
+    },
+    "valuesDescription": {
+      "type": "text",
+      "default": "These core values guide every decision we make and every service we deliver."
+    },
+    "companyValues": {
+      "type": "component",
+      "repeatable": true,
+      "component": "content.value-item",
+      "required": true
+    },
+    "ctaTitle": {
+      "type": "string",
+      "default": "Ready to Partner With Us?"
+    },
+    "ctaDescription": {
+      "type": "text",
+      "default": "Discover how Compleo Health can transform your diagnostic imaging capabilities and improve patient outcomes."
+    },
+    "ctaButtonText": {
+      "type": "string",
+      "default": "Partner With Us"
+    },
+    "ctaButtonHref": {
+      "type": "string",
+      "default": "/contact"
+    }
+  }
+}

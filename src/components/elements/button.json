@@ -18,22 +18,6 @@
       "type": "string",
       "required": true
     },
-    "icon": {
-      "type": "enumeration",
-      "enum": [
-        "settings",
-        "shield",
-        "clock",
-        "handshake",
-        "pound",
-        "cpu",
-        "users",
-        "trending-up",
-        "stethoscope",
-        "message-square"
-      ],
-      "required": false
-    },
     "analytics": {
       "type": "string",
       "required": false
