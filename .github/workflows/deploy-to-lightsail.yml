@@ -31,7 +31,7 @@ jobs:
             # First time setup - clone the repository
             cd /home/ubuntu
             rm -rf cms
-            git clone https://github.com/${{ github.repository }}.git cms
+            git clone https://${{ secrets.GITHUB_TOKEN }}@github.com/flowency-live/CompleoHealthCMS.git cms
             cd cms
           fi
           
@@ -62,9 +62,10 @@ jobs:
           # Build Strapi
           npm run build
           
-          # Restart with PM2
+          # Restart with PM2 (specify working directory)
           pm2 delete strapi-cms 2>/dev/null || true
-          pm2 start npm --name "strapi-cms" -- start
+          cd /home/ubuntu/cms
+          pm2 start npm --name "strapi-cms" --cwd /home/ubuntu/cms -- start
           pm2 save
           
           # Show status
