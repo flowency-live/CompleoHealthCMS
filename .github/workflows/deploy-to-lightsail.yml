@@ -59,8 +59,8 @@ jobs:
             echo "DATABASE_SSL=false" >> .env
           fi
           
-          # Build Strapi
-          npm run build
+          # Build Strapi with increased memory limit
+          NODE_OPTIONS="--max-old-space-size=3072" npm run build
           
           # Restart with PM2 (specify working directory)
           pm2 delete strapi-cms 2>/dev/null || true
