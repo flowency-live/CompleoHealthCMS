@@ -31,7 +31,7 @@ jobs:
             # First time setup - clone the repository
             cd /home/ubuntu
             rm -rf cms
-            git clone https://${{ secrets.GITHUB_TOKEN }}@github.com/flowency-live/CompleoHealthCMS.git cms
+            git clone https://${{ secrets.GTH_PAT }}@github.com/flowency-live/CompleoHealthCMS.git cms
             cd cms
           fi
           
