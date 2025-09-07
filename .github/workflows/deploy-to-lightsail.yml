@@ -40,24 +40,23 @@ jobs:
           
           # Create .env file if it doesn't exist
           if [ ! -f .env ]; then
-            cat > .env << 'EOF'
-NODE_ENV=production
-HOST=0.0.0.0
-PORT=1337
-APP_KEYS=${{ secrets.STRAPI_APP_KEYS }}
-API_TOKEN_SALT=${{ secrets.STRAPI_API_TOKEN_SALT }}
-ADMIN_JWT_SECRET=${{ secrets.STRAPI_ADMIN_JWT_SECRET }}
-TRANSFER_TOKEN_SALT=${{ secrets.STRAPI_TRANSFER_TOKEN_SALT }}
-JWT_SECRET=${{ secrets.STRAPI_JWT_SECRET }}
-
-DATABASE_CLIENT=postgres
-DATABASE_HOST=localhost
-DATABASE_PORT=5432
-DATABASE_NAME=strapidb
-DATABASE_USERNAME=strapiuser
-DATABASE_PASSWORD=CompleoHealth2024
-DATABASE_SSL=false
-EOF
+            echo "Creating .env file..."
+            echo "NODE_ENV=production" > .env
+            echo "HOST=0.0.0.0" >> .env
+            echo "PORT=1337" >> .env
+            echo "APP_KEYS=${{ secrets.STRAPI_APP_KEYS }}" >> .env
+            echo "API_TOKEN_SALT=${{ secrets.STRAPI_API_TOKEN_SALT }}" >> .env
+            echo "ADMIN_JWT_SECRET=${{ secrets.STRAPI_ADMIN_JWT_SECRET }}" >> .env
+            echo "TRANSFER_TOKEN_SALT=${{ secrets.STRAPI_TRANSFER_TOKEN_SALT }}" >> .env
+            echo "JWT_SECRET=${{ secrets.STRAPI_JWT_SECRET }}" >> .env
+            echo "" >> .env
+            echo "DATABASE_CLIENT=postgres" >> .env
+            echo "DATABASE_HOST=localhost" >> .env
+            echo "DATABASE_PORT=5432" >> .env
+            echo "DATABASE_NAME=strapidb" >> .env
+            echo "DATABASE_USERNAME=strapiuser" >> .env
+            echo "DATABASE_PASSWORD=CompleoHealth2024" >> .env
+            echo "DATABASE_SSL=false" >> .env
           fi
           
           # Build Strapi
