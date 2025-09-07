@@ -2,7 +2,7 @@ name: Deploy to AWS Lightsail
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
   workflow_dispatch:
 
 jobs:
@@ -26,7 +26,7 @@ jobs:
           
           # Pull latest code (if using git)
           if [ -d ".git" ]; then
-            git pull origin main
+            git pull origin master
           else
             # First time setup - clone the repository
             cd /home/ubuntu
