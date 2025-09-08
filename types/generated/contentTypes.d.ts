@@ -1020,6 +1020,35 @@ export interface ApiOurTeamPageOurTeamPage extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiPageSeoPageSeo extends Struct.SingleTypeSchema {
+  collectionName: 'page_seos';
+  info: {
+    displayName: 'Page SEO Data';
+    pluralName: 'page-seos';
+    singularName: 'page-seo';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::page-seo.page-seo'
+    > &
+      Schema.Attribute.Private;
+    pages: Schema.Attribute.Component<'seo.page-entry', true> &
+      Schema.Attribute.Required;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiScreeningProgrammesScreeningProgrammes
   extends Struct.SingleTypeSchema {
   collectionName: 'screening_programmes_pages';
@@ -1844,6 +1873,7 @@ declare module '@strapi/strapi' {
       'api::managed-equipment.managed-equipment': ApiManagedEquipmentManagedEquipment;
       'api::news-and-views-page.news-and-views-page': ApiNewsAndViewsPageNewsAndViewsPage;
       'api::our-team-page.our-team-page': ApiOurTeamPageOurTeamPage;
+      'api::page-seo.page-seo': ApiPageSeoPageSeo;
       'api::screening-programmes.screening-programmes': ApiScreeningProgrammesScreeningProgrammes;
       'api::service.service': ApiServiceService;
       'api::services-page.services-page': ApiServicesPageServicesPage;

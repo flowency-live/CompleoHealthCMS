@@ -625,6 +625,52 @@ export interface SectionsServiceDetail extends Struct.ComponentSchema {
   };
 }
 
+export interface SeoPageEntry extends Struct.ComponentSchema {
+  collectionName: 'components_seo_page_entries';
+  info: {
+    description: 'SEO data for individual pages';
+    displayName: 'SEO Page Entry';
+  };
+  attributes: {
+    description: Schema.Attribute.Text &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 160;
+      }>;
+    keywords: Schema.Attribute.Text;
+    ogImage: Schema.Attribute.Media<'images'>;
+    pageSlug: Schema.Attribute.Enumeration<
+      [
+        'home',
+        'services',
+        'about',
+        'contact',
+        'work-with-us',
+        'our-team',
+        'case-studies',
+        'sustainability',
+        'news-and-views',
+        'equipment-details',
+        'privacy-policy',
+        'cookie-policy',
+        'accessibility',
+        'net-zero-goals',
+        'managed-equipment',
+        'equipment-rentals',
+        'clinical-insourcing',
+        'community-diagnostic-centres',
+        'screening-programmes',
+      ]
+    > &
+      Schema.Attribute.Required;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 80;
+      }>;
+  };
+}
+
 export interface SocialLinkedinPost extends Struct.ComponentSchema {
   collectionName: 'components_social_linkedin_posts';
   info: {
@@ -680,6 +726,7 @@ declare module '@strapi/strapi' {
       'sections.home-testimonials': SectionsHomeTestimonials;
       'sections.home-value-proposition': SectionsHomeValueProposition;
       'sections.service-detail': SectionsServiceDetail;
+      'seo.page-entry': SeoPageEntry;
       'social.linkedin-post': SocialLinkedinPost;
     }
   }
