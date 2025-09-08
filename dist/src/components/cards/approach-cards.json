@@ -1,0 +1,21 @@
+{
+    "collectionName": "components_cards_approach_cards",
+    "info": {
+        "displayName": "ApproachCards"
+    },
+    "options": {},
+    "attributes": {
+        "title": {
+            "type": "string"
+        },
+        "description": {
+            "type": "text"
+        },
+        "ApproachFeatures": {
+            "type": "component",
+            "component": "content.features",
+            "repeatable": true
+        }
+    },
+    "config": {}
+}

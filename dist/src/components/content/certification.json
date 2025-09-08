@@ -1,0 +1,9 @@
+{
+    "collectionName": "components_content_certifications",
+    "info": {
+        "displayName": "Certification",
+        "description": "Individual certification or trust badge"
+    },
+    "options": {},
+    "attributes": {}
+}

@@ -1,0 +1,21 @@
+{
+    "collectionName": "components_sections_home_solutions",
+    "info": {
+        "displayName": "Home_Solutions"
+    },
+    "options": {},
+    "attributes": {
+        "title": {
+            "type": "string"
+        },
+        "description": {
+            "type": "text"
+        },
+        "solutions": {
+            "type": "component",
+            "component": "cards.value-cards",
+            "repeatable": true
+        }
+    },
+    "config": {}
+}

@@ -1,0 +1,45 @@
+{
+    "collectionName": "components_sections_service_details",
+    "info": {
+        "displayName": "Service Detail",
+        "description": "Detailed content for a service page"
+    },
+    "options": {},
+    "attributes": {
+        "heroContent": {
+            "type": "component",
+            "repeatable": false,
+            "component": "sections.hero-section",
+            "required": true
+        },
+        "detailTitle": {
+            "type": "string",
+            "required": true
+        },
+        "detailDescription": {
+            "type": "text",
+            "required": true
+        },
+        "detailImage": {
+            "type": "media",
+            "multiple": false,
+            "required": true,
+            "allowedTypes": [
+                "images"
+            ]
+        },
+        "detailFeatures": {
+            "type": "component",
+            "repeatable": true,
+            "component": "elements.feature-with-icon",
+            "required": true,
+            "min": 1
+        },
+        "contentBlocks": {
+            "type": "component",
+            "repeatable": true,
+            "component": "sections.content-block",
+            "required": false
+        }
+    }
+}

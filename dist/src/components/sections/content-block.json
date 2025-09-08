@@ -1,0 +1,36 @@
+{
+    "collectionName": "components_sections_content_blocks",
+    "info": {
+        "displayName": "Content Block",
+        "description": "A flexible content block with heading, text and optional image"
+    },
+    "options": {},
+    "attributes": {
+        "heading": {
+            "type": "string",
+            "required": true
+        },
+        "content": {
+            "type": "richtext",
+            "required": true
+        },
+        "image": {
+            "type": "media",
+            "multiple": false,
+            "required": false,
+            "allowedTypes": [
+                "images"
+            ]
+        },
+        "layout": {
+            "type": "enumeration",
+            "enum": [
+                "text-left",
+                "text-right",
+                "full-width"
+            ],
+            "default": "text-left",
+            "required": true
+        }
+    }
+}

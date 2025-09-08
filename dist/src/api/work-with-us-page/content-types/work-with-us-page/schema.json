@@ -1,0 +1,72 @@
+{
+    "kind": "singleType",
+    "collectionName": "work_with_us_pages",
+    "info": {
+        "singularName": "work-with-us-page",
+        "pluralName": "work-with-us-pages",
+        "displayName": "Work With Us Page",
+        "description": "Work with us / careers page content"
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "Hero": {
+            "type": "component",
+            "repeatable": false,
+            "component": "sections.hero-section"
+        },
+        "whyJoinTitle": {
+            "type": "string",
+            "default": "Why work with us?"
+        },
+        "whyJoinPoints": {
+            "type": "component",
+            "repeatable": true,
+            "component": "content.why-join-point"
+        },
+        "benefitsTitle": {
+            "type": "string",
+            "default": "Benefits & Perks"
+        },
+        "benefitsSubtitle": {
+            "type": "text"
+        },
+        "benefitsItems": {
+            "type": "component",
+            "repeatable": true,
+            "component": "content.benefit-item"
+        },
+        "opportunitiesTitle": {
+            "type": "string",
+            "default": "Current Opportunities"
+        },
+        "opportunitiesSubtitle": {
+            "type": "text"
+        },
+        "linkedinUrl": {
+            "type": "string"
+        },
+        "linkedinButtonText": {
+            "type": "string",
+            "default": "LinkedIn Careers Page"
+        },
+        "ctaHeading": {
+            "type": "string"
+        },
+        "ctaDescription": {
+            "type": "text"
+        },
+        "ctaPrimaryButton": {
+            "type": "component",
+            "repeatable": false,
+            "component": "elements.button"
+        },
+        "ctaSecondaryButton": {
+            "type": "component",
+            "repeatable": false,
+            "component": "elements.button"
+        }
+    }
+}

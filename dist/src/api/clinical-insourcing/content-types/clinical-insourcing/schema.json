@@ -1,0 +1,69 @@
+{
+    "kind": "singleType",
+    "collectionName": "clinical_insourcing_pages",
+    "info": {
+        "singularName": "clinical-insourcing",
+        "pluralName": "clinical-insourcing-pages",
+        "displayName": "Clinical Insourcing Page",
+        "description": "CMS content for the Clinical Insourcing service page"
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "heroTitle": {
+            "type": "string",
+            "required": true,
+            "default": "Clinical Insourcing"
+        },
+        "heroSubtitle": {
+            "type": "text",
+            "required": true,
+            "default": "Flexible staffing solutions with qualified radiographers to boost efficiency and reduce wait times."
+        },
+        "primaryButton": {
+            "type": "component",
+            "repeatable": false,
+            "component": "buttons.button",
+            "required": true
+        },
+        "secondaryButton": {
+            "type": "component",
+            "repeatable": false,
+            "component": "buttons.button",
+            "required": true
+        },
+        "serviceDetailsTitle": {
+            "type": "string",
+            "required": true,
+            "default": "Expert Clinical Staffing Solutions"
+        },
+        "serviceDetailsDescription": {
+            "type": "text",
+            "required": true
+        },
+        "serviceImage": {
+            "type": "string",
+            "required": true
+        },
+        "serviceImageAlt": {
+            "type": "string",
+            "required": true
+        },
+        "features": {
+            "type": "component",
+            "repeatable": true,
+            "component": "elements.service-feature",
+            "required": true,
+            "min": 4,
+            "max": 4
+        },
+        "ctaSection": {
+            "type": "component",
+            "repeatable": false,
+            "component": "sections.curved-pill-cta",
+            "required": true
+        }
+    }
+}

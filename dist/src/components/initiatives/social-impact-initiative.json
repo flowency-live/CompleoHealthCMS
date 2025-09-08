@@ -1,0 +1,22 @@
+{
+    "collectionName": "components_initiatives_social_impact_initiatives",
+    "info": {
+        "displayName": "Social Impact Initiative"
+    },
+    "options": {},
+    "attributes": {
+        "title": {
+            "type": "string",
+            "required": true
+        },
+        "text": {
+            "type": "text",
+            "required": true
+        },
+        "impact": {
+            "type": "text",
+            "required": true
+        }
+    },
+    "config": {}
+}

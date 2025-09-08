@@ -1,0 +1,33 @@
+{
+    "collectionName": "components_news_news_items",
+    "info": {
+        "displayName": "News Item",
+        "description": "External news article with metadata"
+    },
+    "options": {},
+    "attributes": {
+        "url": {
+            "type": "string",
+            "required": true
+        },
+        "category": {
+            "type": "string",
+            "default": "NHS Updates"
+        },
+        "title": {
+            "type": "string",
+            "required": true
+        },
+        "excerpt": {
+            "type": "text"
+        },
+        "readTime": {
+            "type": "string",
+            "default": "5 min read"
+        },
+        "date": {
+            "type": "date",
+            "required": true
+        }
+    }
+}

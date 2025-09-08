@@ -1,0 +1,82 @@
+{
+    "kind": "singleType",
+    "collectionName": "equipment_details_pages",
+    "info": {
+        "singularName": "equipment-details",
+        "pluralName": "equipment-details-pages",
+        "displayName": "Equipment Details Page",
+        "description": "CMS content for the Equipment Details service page"
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "heroTitle": {
+            "type": "string",
+            "required": true,
+            "default": "Mobile and Reloc Equipment Portfolio"
+        },
+        "heroSubtitle": {
+            "type": "text",
+            "required": true,
+            "default": "Scalable solutions bringing state-of-the-art equipment and advanced imaging directly to your location."
+        },
+        "primaryButton": {
+            "type": "component",
+            "repeatable": false,
+            "component": "buttons.button",
+            "required": true
+        },
+        "secondaryButton": {
+            "type": "component",
+            "repeatable": false,
+            "component": "buttons.button",
+            "required": true
+        },
+        "serviceDetailsTitle": {
+            "type": "string",
+            "required": true,
+            "default": "Advanced and Accessible Imaging Capacity"
+        },
+        "serviceDetailsDescription": {
+            "type": "text",
+            "required": true,
+            "default": "Our mobile imaging units possess the highest level of diagnostic capabilities, providing flexible and convenient access to comprehensive solutions."
+        },
+        "serviceImage": {
+            "type": "string",
+            "required": true,
+            "default": "/images/services/mobile-imaging-hero.jpg"
+        },
+        "serviceImageAlt": {
+            "type": "string",
+            "required": true,
+            "default": "Compleo relocatable MRI unit with brand teal and white exterior"
+        },
+        "features": {
+            "type": "component",
+            "repeatable": true,
+            "component": "elements.service-feature",
+            "required": true,
+            "min": 4,
+            "max": 4
+        },
+        "equipmentPortfolioTitle": {
+            "type": "string",
+            "required": true,
+            "default": "Advanced Equipment Portfolio"
+        },
+        "equipmentPortfolioDescription": {
+            "type": "text",
+            "required": true,
+            "default": "State-of-the-art MRI and CT scanners featuring AI-capabilities, helium-free technology, and industry-leading image quality."
+        },
+        "ctaSection": {
+            "type": "component",
+            "repeatable": false,
+            "component": "sections.curved-pill-cta",
+            "required": true
+        }
+    }
+}

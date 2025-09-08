@@ -1,0 +1,14 @@
+{
+    "collectionName": "components_content_paragraph_with_highlights",
+    "info": {
+        "displayName": "Paragraph with Highlight",
+        "description": "Paragraph with highlighted text in the middle"
+    },
+    "options": {},
+    "attributes": {
+        "text": {
+            "type": "text",
+            "required": true
+        }
+    }
+}

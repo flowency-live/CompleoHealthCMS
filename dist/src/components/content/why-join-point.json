@@ -1,0 +1,14 @@
+{
+    "collectionName": "components_content_why_join_points",
+    "info": {
+        "displayName": "Why Join Point",
+        "description": "Point explaining why to join the company (icons are static)"
+    },
+    "options": {},
+    "attributes": {
+        "text": {
+            "type": "string",
+            "required": true
+        }
+    }
+}

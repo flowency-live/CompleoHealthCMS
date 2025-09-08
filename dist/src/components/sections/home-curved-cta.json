@@ -1,0 +1,40 @@
+{
+    "collectionName": "components_sections_home_curved_cta",
+    "info": {
+        "displayName": "Home_CurvedCTA",
+        "description": "Curved CTA panel section configuration"
+    },
+    "options": {},
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Ready to Partner with Compleo?",
+            "required": true
+        },
+        "description": {
+            "type": "text",
+            "default": "Let's discuss how we can support your diagnostic imaging needs and transform services to improve patient outcomes together.",
+            "required": false
+        },
+        "buttonText": {
+            "type": "string",
+            "default": "Partner With Us",
+            "required": true
+        },
+        "buttonHref": {
+            "type": "string",
+            "default": "/contact",
+            "required": true
+        },
+        "imageSrc": {
+            "type": "string",
+            "default": "/images/contact/team-collaboration.jpg",
+            "required": false
+        },
+        "mobileImageSrc": {
+            "type": "string",
+            "default": "/images/contact/team-collaboration-mobile.jpg",
+            "required": false
+        }
+    }
+}

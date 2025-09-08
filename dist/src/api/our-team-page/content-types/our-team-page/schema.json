@@ -1,0 +1,49 @@
+{
+    "kind": "singleType",
+    "collectionName": "our_team_pages",
+    "info": {
+        "singularName": "our-team-page",
+        "pluralName": "our-team-pages",
+        "displayName": "Our Team Page",
+        "description": "Our Team page content"
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "Hero": {
+            "type": "component",
+            "repeatable": false,
+            "component": "sections.hero-section"
+        },
+        "leadershipTitle": {
+            "type": "string",
+            "default": "Leadership Team"
+        },
+        "leadershipDescription": {
+            "type": "text"
+        },
+        "cultureTitle": {
+            "type": "string",
+            "default": "Our Culture & Values"
+        },
+        "cultureDescription": {
+            "type": "text"
+        },
+        "cultureValues": {
+            "type": "component",
+            "repeatable": true,
+            "component": "content.culture-value"
+        },
+        "cultureImage": {
+            "type": "media",
+            "multiple": false,
+            "required": false,
+            "allowedTypes": ["images"]
+        },
+        "cultureImageAlt": {
+            "type": "string"
+        }
+    }
+}

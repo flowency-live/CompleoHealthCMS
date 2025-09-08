@@ -1,0 +1,38 @@
+{
+    "collectionName": "components_sections_heroes",
+    "info": {
+        "displayName": "Hero"
+    },
+    "options": {},
+    "attributes": {
+        "heading": {
+            "type": "string"
+        },
+        "highlighttext": {
+            "type": "string"
+        },
+        "subheading": {
+            "type": "text"
+        },
+        "backgroundVideoURL": {
+            "type": "string"
+        },
+        "fallbackImageURL": {
+            "type": "string"
+        },
+        "primaryButton": {
+            "type": "component",
+            "component": "buttons.button",
+            "repeatable": false
+        },
+        "secondaryButton": {
+            "type": "component",
+            "component": "buttons.button",
+            "repeatable": false
+        },
+        "impactStatsTitle": {
+            "type": "string"
+        }
+    },
+    "config": {}
+}

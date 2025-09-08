@@ -1,0 +1,113 @@
+{
+    "kind": "singleType",
+    "collectionName": "equipment_rental_pages",
+    "info": {
+        "singularName": "equipment-rental",
+        "pluralName": "equipment-rental-pages",
+        "displayName": "Equipment Rental Page",
+        "description": "CMS content for the Equipment Rental service page"
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "heroTitle": {
+            "type": "string",
+            "default": "Equipment Rental",
+            "required": true
+        },
+        "heroSubtitle": {
+            "type": "text",
+            "default": "Short, medium and long-term MRI/CT rental with rapid deployment and full support included.",
+            "required": true
+        },
+        "primaryButton": {
+            "type": "component",
+            "component": "buttons.button",
+            "repeatable": false,
+            "required": true
+        },
+        "secondaryButton": {
+            "type": "component",
+            "component": "buttons.button",
+            "repeatable": false,
+            "required": true
+        },
+        "serviceDetailsTitle": {
+            "type": "string",
+            "default": "Complete Equipment Rental Solutions",
+            "required": true
+        },
+        "serviceDetailsDescription": {
+            "type": "text",
+            "required": true
+        },
+        "serviceImage": {
+            "type": "string",
+            "required": true
+        },
+        "serviceImageAlt": {
+            "type": "string",
+            "required": true
+        },
+        "features": {
+            "type": "component",
+            "component": "elements.service-feature",
+            "repeatable": true,
+            "required": true,
+            "min": 3,
+            "max": 6
+        },
+        "videoHeroTitle": {
+            "type": "string",
+            "default": "Advanced Imaging Solutions",
+            "required": true
+        },
+        "videoHeroDescription": {
+            "type": "text",
+            "required": true
+        },
+        "videoHeroBackgroundVideo": {
+            "type": "string",
+            "required": true
+        },
+        "videoHeroFallbackImage": {
+            "type": "string",
+            "required": true
+        },
+        "mobileUnitsTitle": {
+            "type": "string",
+            "default": "Mobile & Relocatable Units",
+            "required": true
+        },
+        "mobileUnitsDescription": {
+            "type": "text",
+            "required": true
+        },
+        "MobileSolutionsText_Title": {
+            "type": "string"
+        },
+        "MobileSolutionsText_Description": {
+            "type": "text"
+        },
+        "mobileUnitsFeatures": {
+            "type": "component",
+            "component": "elements.service-feature",
+            "repeatable": true,
+            "required": true,
+            "min": 3,
+            "max": 6
+        },
+        "mobileUnitsImage": {
+            "type": "string",
+            "required": true
+        },
+        "ctaSection": {
+            "type": "component",
+            "component": "sections.curved-pill-cta",
+            "repeatable": false,
+            "required": true
+        }
+    }
+}

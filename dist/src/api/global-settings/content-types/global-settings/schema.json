@@ -1,0 +1,36 @@
+{
+    "kind": "singleType",
+    "collectionName": "global_settings",
+    "info": {
+        "singularName": "global-settings",
+        "pluralName": "global-settingses",
+        "displayName": "Global Settings"
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "Footer": {
+            "type": "component",
+            "component": "sections.footer",
+            "repeatable": false
+        },
+        "TrustSignals": {
+            "type": "component",
+            "component": "global.trust-signals",
+            "repeatable": false
+        },
+        "ContactPanel": {
+            "type": "component",
+            "component": "global.contact-panel",
+            "repeatable": false
+        },
+        "ImpactStatistics": {
+            "type": "component",
+            "component": "global.impact-statistic-group",
+            "repeatable": false,
+            "required": true
+        }
+    }
+}

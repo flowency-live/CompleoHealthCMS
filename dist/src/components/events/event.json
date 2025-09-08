@@ -1,0 +1,29 @@
+{
+    "collectionName": "components_events_events",
+    "info": {
+        "displayName": "Event",
+        "description": "Industry event with details"
+    },
+    "options": {},
+    "attributes": {
+        "title": {
+            "type": "string",
+            "required": true
+        },
+        "date": {
+            "type": "string",
+            "required": true
+        },
+        "location": {
+            "type": "string",
+            "required": true
+        },
+        "imageUrl": {
+            "type": "string"
+        },
+        "url": {
+            "type": "string",
+            "required": true
+        }
+    }
+}

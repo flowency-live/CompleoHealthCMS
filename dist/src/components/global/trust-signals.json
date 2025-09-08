@@ -1,0 +1,20 @@
+{
+    "collectionName": "components_global_trust_signals",
+    "info": {
+        "displayName": "Trust Signals",
+        "description": "Trust signals section with title and subtitle text"
+    },
+    "options": {},
+    "attributes": {
+        "title": {
+            "type": "string",
+            "required": true,
+            "default": "Certified Excellence"
+        },
+        "subtitle": {
+            "type": "text",
+            "required": true,
+            "default": "Trusted by healthcare professionals across the UK and Europe"
+        }
+    }
+}

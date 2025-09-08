@@ -1,0 +1,22 @@
+{
+    "collectionName": "components_cards_interest_areas",
+    "info": {
+        "displayName": "Interest Area Card"
+    },
+    "options": {},
+    "attributes": {
+        "title": {
+            "type": "string",
+            "required": true
+        },
+        "text": {
+            "type": "text",
+            "required": true
+        },
+        "image": {
+            "type": "string",
+            "required": true
+        }
+    },
+    "config": {}
+}

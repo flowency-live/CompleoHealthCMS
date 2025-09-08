@@ -1,0 +1,21 @@
+{
+    "kind": "singleType",
+    "collectionName": "page_seos",
+    "info": {
+        "singularName": "page-seo",
+        "pluralName": "page-seos",
+        "displayName": "Page SEO Data"
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "pages": {
+            "type": "component",
+            "component": "seo.page-entry",
+            "repeatable": true,
+            "required": true
+        }
+    }
+}

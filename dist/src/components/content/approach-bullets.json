@@ -1,0 +1,16 @@
+{
+    "collectionName": "components_content_approach_bullets",
+    "info": {
+        "displayName": "ApproachBullets"
+    },
+    "options": {},
+    "attributes": {
+        "title": {
+            "type": "string"
+        },
+        "description": {
+            "type": "text"
+        }
+    },
+    "config": {}
+}

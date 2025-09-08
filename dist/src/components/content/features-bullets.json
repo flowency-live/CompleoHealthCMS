@@ -1,0 +1,13 @@
+{
+    "collectionName": "components_content_features_bullets",
+    "info": {
+        "displayName": "FeaturesBullets"
+    },
+    "options": {},
+    "attributes": {
+        "text": {
+            "type": "string"
+        }
+    },
+    "config": {}
+}

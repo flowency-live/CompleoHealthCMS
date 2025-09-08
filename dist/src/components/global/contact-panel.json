@@ -1,0 +1,70 @@
+{
+    "collectionName": "components_global_contact_panel",
+    "info": {
+        "displayName": "Contact Panel",
+        "description": "Contact panel slide-out with all contact information"
+    },
+    "options": {},
+    "attributes": {
+        "header": {
+            "type": "string",
+            "required": true,
+            "default": "Contact Us"
+        },
+        "description": {
+            "type": "text",
+            "required": true,
+            "default": "We'd love to hear from you. Connect with us using one of the methods below."
+        },
+        "officeTitle": {
+            "type": "string",
+            "required": true,
+            "default": "Manchester Office"
+        },
+        "addressLine1": {
+            "type": "string",
+            "required": true,
+            "default": "Beehive Mill"
+        },
+        "addressLine2": {
+            "type": "string",
+            "required": true,
+            "default": "Jersey Street"
+        },
+        "addressLine3": {
+            "type": "string",
+            "required": true,
+            "default": "Manchester M4 6JG"
+        },
+        "addressLine4": {
+            "type": "string",
+            "required": true,
+            "default": "United Kingdom"
+        },
+        "phone": {
+            "type": "string",
+            "required": true,
+            "default": "+44 (0)161 884 1303"
+        },
+        "email": {
+            "type": "string",
+            "required": true,
+            "default": "info@compleohealth.com"
+        },
+        "businessHours": {
+            "type": "string",
+            "required": true,
+            "default": "Monday-Friday 8am-8pm"
+        },
+        "linkedinText": {
+            "type": "string",
+            "required": true,
+            "default": "Connect with us on LinkedIn"
+        },
+        "contactFormButtonText": {
+            "type": "string",
+            "required": true,
+            "default": "Complete a Contact Form"
+        }
+    }
+}

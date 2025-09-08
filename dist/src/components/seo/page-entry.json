@@ -1,0 +1,55 @@
+{
+    "collectionName": "components_seo_page_entries",
+    "info": {
+        "displayName": "SEO Page Entry",
+        "description": "SEO data for individual pages"
+    },
+    "options": {},
+    "attributes": {
+        "pageSlug": {
+            "type": "enumeration",
+            "enum": [
+                "home",
+                "services",
+                "about",
+                "contact",
+                "work-with-us",
+                "our-team",
+                "case-studies",
+                "sustainability",
+                "news-and-views",
+                "equipment-details",
+                "privacy-policy",
+                "cookie-policy",
+                "accessibility",
+                "net-zero-goals",
+                "managed-equipment",
+                "equipment-rentals",
+                "clinical-insourcing",
+                "community-diagnostic-centres",
+                "screening-programmes"
+            ],
+            "required": true
+        },
+        "title": {
+            "type": "string",
+            "required": true,
+            "maxLength": 80
+        },
+        "description": {
+            "type": "text",
+            "required": true,
+            "maxLength": 160
+        },
+        "keywords": {
+            "type": "text"
+        },
+        "ogImage": {
+            "type": "media",
+            "multiple": false,
+            "required": false,
+            "allowedTypes": ["images"]
+        }
+    },
+    "config": {}
+}

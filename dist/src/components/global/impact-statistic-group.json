@@ -1,0 +1,17 @@
+{
+    "collectionName": "components_global_impact_statistic_groups",
+    "info": {
+        "displayName": "Impact Statistic Group",
+        "description": "Group of impact statistics with a title - used in global settings for shared impact statistics across pages"
+    },
+    "options": {},
+    "attributes": {
+        "statistics": {
+            "type": "component",
+            "component": "global.impact-statistic",
+            "repeatable": true,
+            "required": true
+        }
+    },
+    "config": {}
+}

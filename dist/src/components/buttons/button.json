@@ -1,0 +1,25 @@
+{
+    "collectionName": "components_buttons_buttons",
+    "info": {
+        "displayName": "Button"
+    },
+    "options": {},
+    "attributes": {
+        "text": {
+            "type": "string"
+        },
+        "subtext": {
+            "type": "string"
+        },
+        "url": {
+            "type": "string"
+        },
+        "icon": {
+            "type": "string"
+        },
+        "analyticsId": {
+            "type": "string"
+        }
+    },
+    "config": {}
+}

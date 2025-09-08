@@ -125,6 +125,6 @@ coverage
 license.txt
 exports
 .strapi
-dist
+# dist  # Temporarily allow dist for pre-built admin panel
 .strapi-updater.json
 .strapi-cloud.json

@@ -1,0 +1,69 @@
+{
+    "kind": "singleType",
+    "collectionName": "managed_equipment_pages",
+    "info": {
+        "singularName": "managed-equipment",
+        "pluralName": "managed-equipment-pages",
+        "displayName": "Managed Equipment Page",
+        "description": "CMS content for the Managed Equipment service page"
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "heroTitle": {
+            "type": "string",
+            "required": true,
+            "default": "Managed Equipment Services"
+        },
+        "heroSubtitle": {
+            "type": "text",
+            "required": true,
+            "default": "Turnkey solutions with state-of-the-art equipment, maintenance, and 24/7 support for seamless service delivery."
+        },
+        "primaryButton": {
+            "type": "component",
+            "repeatable": false,
+            "component": "buttons.button",
+            "required": true
+        },
+        "secondaryButton": {
+            "type": "component",
+            "repeatable": false,
+            "component": "buttons.button",
+            "required": true
+        },
+        "serviceDetailsTitle": {
+            "type": "string",
+            "required": true,
+            "default": "Complete Managed Equipment Solutions"
+        },
+        "serviceDetailsDescription": {
+            "type": "text",
+            "required": true
+        },
+        "serviceImage": {
+            "type": "string",
+            "required": true
+        },
+        "serviceImageAlt": {
+            "type": "string",
+            "required": true
+        },
+        "features": {
+            "type": "component",
+            "repeatable": true,
+            "component": "elements.service-feature",
+            "required": true,
+            "min": 4,
+            "max": 4
+        },
+        "ctaSection": {
+            "type": "component",
+            "repeatable": false,
+            "component": "sections.curved-pill-cta",
+            "required": true
+        }
+    }
+}

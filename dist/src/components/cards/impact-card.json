@@ -1,0 +1,26 @@
+{
+    "collectionName": "components_cards_impact_cards",
+    "info": {
+        "displayName": "Impact Card"
+    },
+    "options": {},
+    "attributes": {
+        "title": {
+            "type": "string",
+            "required": true
+        },
+        "text": {
+            "type": "text",
+            "required": true
+        },
+        "imageUrl": {
+            "type": "string",
+            "required": false
+        },
+        "url": {
+            "type": "string",
+            "required": false
+        }
+    },
+    "config": {}
+}
