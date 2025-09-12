@@ -40,7 +40,14 @@
       "Read(C:\\VSProjects\\CompleoHealthLatest\\client\\src\\components\\home/**)",
       "Read(C:\\VSProjects\\CompleoHealthLatest\\client\\src\\components\\home/**)",
       "Read(C:\\VSProjects\\CompleoHealthLatest\\shared\\data/**)",
-      "Read(C:\\VSProjects\\CompleoHealthLatest\\shared\\data/**)"
+      "Read(C:\\VSProjects\\CompleoHealthLatest\\shared\\data/**)",
+      "Read(//c/VSProjects/CompleoHealthLatest/docs/**)",
+      "Read(//c/VSProjects/CompleoHealthLatest/client/src/components/forms/**)",
+      "Read(//c/VSProjects/CompleoHealthLatest/**)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(npm run build:*)"
     ],
     "deny": [],
     "ask": []
