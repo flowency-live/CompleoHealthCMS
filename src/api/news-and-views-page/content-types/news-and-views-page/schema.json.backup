@@ -1,0 +1,85 @@
+{
+  "kind": "singleType",
+  "collectionName": "news_and_views_pages",
+  "info": {
+    "singularName": "news-and-views-page",
+    "pluralName": "news-and-views-pages",
+    "displayName": "News and Views Page",
+    "description": "News and Views page content management"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heroTitle": {
+      "type": "string",
+      "default": "News and"
+    },
+    "heroHighlightWord": {
+      "type": "string", 
+      "default": "Views"
+    },
+    "heroSubtitle": {
+      "type": "text",
+      "default": "Buzzing ideas straight from the hive. Your monthly dose of healthcare hype + Compleo vibes."
+    },
+    "heroDescription": {
+      "type": "text",
+      "default": "The pulse, the buzz, and what's next in care — all in one scroll."
+    },
+    "beeCardTitle": {
+      "type": "string",
+      "default": "The Compleo Buzz"
+    },
+    "beeCardDescription": {
+      "type": "text",
+      "default": "Straight from the hive: insights, updates and Compleo energy."
+    },
+    "newsTitle": {
+      "type": "string",
+      "default": "What's Happening"
+    },
+    "newsDescription": {
+      "type": "text",
+      "default": "Where innovation meets inspiration — Compleo's take on what's shaping tomorrow's care, minus the jargon."
+    },
+    "newsBadgeText": {
+      "type": "string",
+      "default": "Latest Updates"
+    },
+    "eventsTitle": {
+      "type": "string",
+      "default": "Events"
+    },
+    "eventsDescription": {
+      "type": "text",
+      "default": "Join us at industry events and conferences where we're showcasing the future of diagnostic imaging."
+    },
+    "eventsBadgeText": {
+      "type": "string",
+      "default": "Live Events"
+    },
+    "socialTitle": {
+      "type": "string",
+      "default": "Follow Us on"
+    },
+    "socialDescription": {
+      "type": "text",
+      "default": "Stay connected with our latest updates, insights, and company news directly from our LinkedIn feed."
+    },
+    "socialBadgeText": {
+      "type": "string",
+      "default": "Social Updates"
+    },
+    "linkedinUrl": {
+      "type": "string",
+      "default": "https://www.linkedin.com/company/compleohealth"
+    },
+    "ctaSection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "cta.pill-cta"
+    }
+  }
+}

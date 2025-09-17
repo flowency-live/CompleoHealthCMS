@@ -411,7 +411,9 @@ export interface NewsNewsItem extends Struct.ComponentSchema {
     category: Schema.Attribute.String &
       Schema.Attribute.DefaultTo<'NHS Updates'>;
     date: Schema.Attribute.Date & Schema.Attribute.Required;
+    domain: Schema.Attribute.String & Schema.Attribute.DefaultTo<'NEWS'>;
     excerpt: Schema.Attribute.Text;
+    image: Schema.Attribute.String;
     readTime: Schema.Attribute.String &
       Schema.Attribute.DefaultTo<'5 min read'>;
     title: Schema.Attribute.String & Schema.Attribute.Required;
@@ -638,7 +640,6 @@ export interface SeoPageEntry extends Struct.ComponentSchema {
         maxLength: 160;
       }>;
     keywords: Schema.Attribute.Text;
-    ogImage: Schema.Attribute.Media<'images'>;
     pageSlug: Schema.Attribute.Enumeration<
       [
         'home',

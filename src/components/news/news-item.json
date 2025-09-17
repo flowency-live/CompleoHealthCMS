@@ -28,6 +28,15 @@
     "date": {
       "type": "date",
       "required": true
+    },
+    "image": {
+      "type": "string",
+      "required": false
+    },
+    "domain": {
+      "type": "string",
+      "required": false,
+      "default": "NEWS"
     }
   }
 }

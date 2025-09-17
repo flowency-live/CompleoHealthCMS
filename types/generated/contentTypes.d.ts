@@ -929,7 +929,7 @@ export interface ApiNewsAndViewsPageNewsAndViewsPage
     singularName: 'news-and-views-page';
   };
   options: {
-    draftAndPublish: false;
+    draftAndPublish: true;
   };
   attributes: {
     beeCardDescription: Schema.Attribute.Text &
@@ -940,7 +940,13 @@ export interface ApiNewsAndViewsPageNewsAndViewsPage
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     ctaSection: Schema.Attribute.Component<'cta.pill-cta', false>;
-    events: Schema.Attribute.Component<'events.event', true>;
+    events: Schema.Attribute.Component<'events.event', true> &
+      Schema.Attribute.SetMinMax<
+        {
+          max: 10;
+        },
+        number
+      >;
     eventsBadgeText: Schema.Attribute.String &
       Schema.Attribute.DefaultTo<'Live Events'>;
     eventsDescription: Schema.Attribute.Text &
@@ -953,7 +959,13 @@ export interface ApiNewsAndViewsPageNewsAndViewsPage
     heroSubtitle: Schema.Attribute.Text &
       Schema.Attribute.DefaultTo<'Buzzing ideas straight from the hive. Your monthly dose of healthcare hype + Compleo vibes.'>;
     heroTitle: Schema.Attribute.String & Schema.Attribute.DefaultTo<'News and'>;
-    linkedinPosts: Schema.Attribute.Component<'social.linkedin-post', true>;
+    linkedinPosts: Schema.Attribute.Component<'social.linkedin-post', true> &
+      Schema.Attribute.SetMinMax<
+        {
+          max: 6;
+        },
+        number
+      >;
     linkedinUrl: Schema.Attribute.String &
       Schema.Attribute.DefaultTo<'https://www.linkedin.com/company/compleohealth'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
@@ -962,11 +974,17 @@ export interface ApiNewsAndViewsPageNewsAndViewsPage
       'api::news-and-views-page.news-and-views-page'
     > &
       Schema.Attribute.Private;
+    newsArticles: Schema.Attribute.Component<'news.news-item', true> &
+      Schema.Attribute.SetMinMax<
+        {
+          max: 10;
+        },
+        number
+      >;
     newsBadgeText: Schema.Attribute.String &
       Schema.Attribute.DefaultTo<'Latest Updates'>;
     newsDescription: Schema.Attribute.Text &
       Schema.Attribute.DefaultTo<"Where innovation meets inspiration \u2014 Compleo's take on what's shaping tomorrow's care, minus the jargon.">;
-    newsItems: Schema.Attribute.Component<'news.news-item', true>;
     newsTitle: Schema.Attribute.String &
       Schema.Attribute.DefaultTo<"What's Happening">;
     publishedAt: Schema.Attribute.DateTime;

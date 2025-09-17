@@ -48,6 +48,12 @@
             "type": "string",
             "default": "Latest Updates"
         },
+        "newsArticles": {
+            "type": "component",
+            "repeatable": true,
+            "component": "news.news-item",
+            "max": 10
+        },
         "eventsTitle": {
             "type": "string",
             "default": "Events"
@@ -59,6 +65,12 @@
         "eventsBadgeText": {
             "type": "string",
             "default": "Live Events"
+        },
+        "events": {
+            "type": "component",
+            "repeatable": true,
+            "component": "events.event",
+            "max": 10
         },
         "socialTitle": {
             "type": "string",
@@ -75,6 +87,12 @@
         "linkedinUrl": {
             "type": "string",
             "default": "https://www.linkedin.com/company/compleohealth"
+        },
+        "linkedinPosts": {
+            "type": "component",
+            "repeatable": true,
+            "component": "social.linkedin-post",
+            "max": 6
         },
         "ctaSection": {
             "type": "component",
