@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_timeline_timeline_items",
+  "info": {
+    "displayName": "Timeline Item",
+    "description": "Individual timeline item with date, category, type, title and description"
+  },
+  "options": {},
+  "attributes": {
+    "item_id": {
+      "type": "string",
+      "required": true
+    },
+    "date": {
+      "type": "string",
+      "required": true
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": ["carbon", "social"],
+      "required": true
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": ["nhs", "compleo"],
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": ["completed", "in-progress", "planned"],
+      "required": true
+    }
+  }
+}

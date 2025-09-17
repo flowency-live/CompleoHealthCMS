@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_page_sections_timeline_sections",
+  "info": {
+    "displayName": "Timeline Section",
+    "description": "Section header for timeline with title and subtitle"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "subtitle": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

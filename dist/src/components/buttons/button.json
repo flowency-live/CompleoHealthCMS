@@ -14,9 +14,6 @@
         "url": {
             "type": "string"
         },
-        "icon": {
-            "type": "string"
-        },
         "analyticsId": {
             "type": "string"
         }

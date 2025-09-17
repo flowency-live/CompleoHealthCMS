@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_page_sections_dual_button_ctas",
+  "info": {
+    "displayName": "Dual Button CTA",
+    "description": "Call to action section with title, subtitle and two buttons"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "subtitle": {
+      "type": "text",
+      "required": true
+    },
+    "buttons": {
+      "type": "component",
+      "component": "buttons.button",
+      "repeatable": true,
+      "required": true,
+      "max": 2
+    }
+  }
+}

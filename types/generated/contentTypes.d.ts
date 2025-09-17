@@ -919,6 +919,48 @@ export interface ApiManagedEquipmentManagedEquipment
   };
 }
 
+export interface ApiNetZeroGoalsPageNetZeroGoalsPage
+  extends Struct.SingleTypeSchema {
+  collectionName: 'net_zero_goals_page';
+  info: {
+    displayName: 'Net Zero Goals Page';
+    pluralName: 'net-zero-goals-pages';
+    singularName: 'net-zero-goals-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    cta: Schema.Attribute.Component<'page-sections.dual-button-cta', false> &
+      Schema.Attribute.Required;
+    hero: Schema.Attribute.Component<
+      'page-sections.hero-with-back-button',
+      false
+    > &
+      Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::net-zero-goals-page.net-zero-goals-page'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    timeline: Schema.Attribute.Component<
+      'page-sections.timeline-section',
+      false
+    > &
+      Schema.Attribute.Required;
+    timelineItems: Schema.Attribute.Component<'timeline.timeline-item', true> &
+      Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiNewsAndViewsPageNewsAndViewsPage
   extends Struct.SingleTypeSchema {
   collectionName: 'news_and_views_pages';
@@ -1317,6 +1359,40 @@ export interface ApiSustainabilityPageSustainabilityPage
     sustainabilityInitiativesTitle: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'Sustainability Initiatives'>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiTeamMemberTeamMember extends Struct.CollectionTypeSchema {
+  collectionName: 'team_members';
+  info: {
+    description: 'Team member profiles';
+    displayName: 'Team Members';
+    pluralName: 'team-members';
+    singularName: 'team-member';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    bio: Schema.Attribute.RichText;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    id_slug: Schema.Attribute.UID<'name'> & Schema.Attribute.Required;
+    image: Schema.Attribute.Media<'images'>;
+    linkedin: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::team-member.team-member'
+    > &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    publishedAt: Schema.Attribute.DateTime;
+    role: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1889,6 +1965,7 @@ declare module '@strapi/strapi' {
       'api::global-settings.global-settings': ApiGlobalSettingsGlobalSettings;
       'api::home.home': ApiHomeHome;
       'api::managed-equipment.managed-equipment': ApiManagedEquipmentManagedEquipment;
+      'api::net-zero-goals-page.net-zero-goals-page': ApiNetZeroGoalsPageNetZeroGoalsPage;
       'api::news-and-views-page.news-and-views-page': ApiNewsAndViewsPageNewsAndViewsPage;
       'api::our-team-page.our-team-page': ApiOurTeamPageOurTeamPage;
       'api::page-seo.page-seo': ApiPageSeoPageSeo;
@@ -1896,6 +1973,7 @@ declare module '@strapi/strapi' {
       'api::service.service': ApiServiceService;
       'api::services-page.services-page': ApiServicesPageServicesPage;
       'api::sustainability-page.sustainability-page': ApiSustainabilityPageSustainabilityPage;
+      'api::team-member.team-member': ApiTeamMemberTeamMember;
       'api::work-with-us-page.work-with-us-page': ApiWorkWithUsPageWorkWithUsPage;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;

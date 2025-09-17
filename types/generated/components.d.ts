@@ -7,7 +7,6 @@ export interface ButtonsButton extends Struct.ComponentSchema {
   };
   attributes: {
     analyticsId: Schema.Attribute.String;
-    icon: Schema.Attribute.String;
     subtext: Schema.Attribute.String;
     text: Schema.Attribute.String;
     url: Schema.Attribute.String;
@@ -421,6 +420,53 @@ export interface NewsNewsItem extends Struct.ComponentSchema {
   };
 }
 
+export interface PageSectionsDualButtonCta extends Struct.ComponentSchema {
+  collectionName: 'components_page_sections_dual_button_ctas';
+  info: {
+    description: 'Call to action section with title, subtitle and two buttons';
+    displayName: 'Dual Button CTA';
+  };
+  attributes: {
+    buttons: Schema.Attribute.Component<'buttons.button', true> &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMax<
+        {
+          max: 2;
+        },
+        number
+      >;
+    subtitle: Schema.Attribute.Text & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface PageSectionsHeroWithBackButton extends Struct.ComponentSchema {
+  collectionName: 'components_page_sections_hero_with_back_buttons';
+  info: {
+    description: 'Hero section with back button, title, subtitle and action button';
+    displayName: 'Hero with Back Button';
+  };
+  attributes: {
+    nhsStrategyButton: Schema.Attribute.Component<'buttons.button', false> &
+      Schema.Attribute.Required;
+    subtitle: Schema.Attribute.Text & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    titleHighlight: Schema.Attribute.String;
+  };
+}
+
+export interface PageSectionsTimelineSection extends Struct.ComponentSchema {
+  collectionName: 'components_page_sections_timeline_sections';
+  info: {
+    description: 'Section header for timeline with title and subtitle';
+    displayName: 'Timeline Section';
+  };
+  attributes: {
+    subtitle: Schema.Attribute.Text & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface SectionsContentBlock extends Struct.ComponentSchema {
   collectionName: 'components_sections_content_blocks';
   info: {
@@ -683,6 +729,28 @@ export interface SocialLinkedinPost extends Struct.ComponentSchema {
   };
 }
 
+export interface TimelineTimelineItem extends Struct.ComponentSchema {
+  collectionName: 'components_timeline_timeline_items';
+  info: {
+    description: 'Individual timeline item with date, category, type, title and description';
+    displayName: 'Timeline Item';
+  };
+  attributes: {
+    category: Schema.Attribute.Enumeration<['carbon', 'social']> &
+      Schema.Attribute.Required;
+    date: Schema.Attribute.String & Schema.Attribute.Required;
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    item_id: Schema.Attribute.String & Schema.Attribute.Required;
+    status: Schema.Attribute.Enumeration<
+      ['completed', 'in-progress', 'planned']
+    > &
+      Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    type: Schema.Attribute.Enumeration<['nhs', 'compleo']> &
+      Schema.Attribute.Required;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
@@ -715,6 +783,9 @@ declare module '@strapi/strapi' {
       'initiatives.social-impact-initiative': InitiativesSocialImpactInitiative;
       'initiatives.sustainability-initiative': InitiativesSustainabilityInitiative;
       'news.news-item': NewsNewsItem;
+      'page-sections.dual-button-cta': PageSectionsDualButtonCta;
+      'page-sections.hero-with-back-button': PageSectionsHeroWithBackButton;
+      'page-sections.timeline-section': PageSectionsTimelineSection;
       'sections.content-block': SectionsContentBlock;
       'sections.curved-pill-cta': SectionsCurvedPillCta;
       'sections.footer': SectionsFooter;
@@ -729,6 +800,7 @@ declare module '@strapi/strapi' {
       'sections.service-detail': SectionsServiceDetail;
       'seo.page-entry': SeoPageEntry;
       'social.linkedin-post': SocialLinkedinPost;
+      'timeline.timeline-item': TimelineTimelineItem;
     }
   }
 }

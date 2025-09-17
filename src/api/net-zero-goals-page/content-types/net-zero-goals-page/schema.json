@@ -1,0 +1,36 @@
+{
+  "kind": "singleType",
+  "collectionName": "net_zero_goals_page",
+  "info": {
+    "singularName": "net-zero-goals-page",
+    "pluralName": "net-zero-goals-pages",
+    "displayName": "Net Zero Goals Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero": {
+      "type": "component",
+      "component": "page-sections.hero-with-back-button",
+      "required": true
+    },
+    "timeline": {
+      "type": "component",
+      "component": "page-sections.timeline-section",
+      "required": true
+    },
+    "timelineItems": {
+      "type": "component",
+      "component": "timeline.timeline-item",
+      "repeatable": true,
+      "required": true
+    },
+    "cta": {
+      "type": "component",
+      "component": "page-sections.dual-button-cta",
+      "required": true
+    }
+  }
+}
