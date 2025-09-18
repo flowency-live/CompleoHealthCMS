@@ -1109,6 +1109,41 @@ export interface ApiPageSeoPageSeo extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiPolicyDocumentPolicyDocument
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'policy_documents';
+  info: {
+    description: 'Policy documents and governance statements';
+    displayName: 'Policy Document';
+    pluralName: 'policy-documents';
+    singularName: 'policy-document';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    document: Schema.Attribute.Media<'files'> & Schema.Attribute.Required;
+    lastUpdated: Schema.Attribute.Date & Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::policy-document.policy-document'
+    > &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    order: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
+    publishedAt: Schema.Attribute.DateTime;
+    size: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiScreeningProgrammesScreeningProgrammes
   extends Struct.SingleTypeSchema {
   collectionName: 'screening_programmes_pages';
@@ -1393,6 +1428,46 @@ export interface ApiTeamMemberTeamMember extends Struct.CollectionTypeSchema {
     name: Schema.Attribute.String & Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
     role: Schema.Attribute.String & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiWebsitePolicyWebsitePolicy
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'website_policies';
+  info: {
+    description: 'Manage website policy pages like Privacy Policy, Accessibility, and Cookie Policy';
+    displayName: 'Website Policy';
+    pluralName: 'website-policies';
+    singularName: 'website-policy';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    content: Schema.Attribute.RichText & Schema.Attribute.Required;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    lastUpdated: Schema.Attribute.DateTime & Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::website-policy.website-policy'
+    > &
+      Schema.Attribute.Private;
+    metaDescription: Schema.Attribute.Text &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 160;
+      }>;
+    pageType: Schema.Attribute.Enumeration<
+      ['accessibility', 'privacy-policy', 'cookie-policy']
+    > &
+      Schema.Attribute.Required;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1969,11 +2044,13 @@ declare module '@strapi/strapi' {
       'api::news-and-views-page.news-and-views-page': ApiNewsAndViewsPageNewsAndViewsPage;
       'api::our-team-page.our-team-page': ApiOurTeamPageOurTeamPage;
       'api::page-seo.page-seo': ApiPageSeoPageSeo;
+      'api::policy-document.policy-document': ApiPolicyDocumentPolicyDocument;
       'api::screening-programmes.screening-programmes': ApiScreeningProgrammesScreeningProgrammes;
       'api::service.service': ApiServiceService;
       'api::services-page.services-page': ApiServicesPageServicesPage;
       'api::sustainability-page.sustainability-page': ApiSustainabilityPageSustainabilityPage;
       'api::team-member.team-member': ApiTeamMemberTeamMember;
+      'api::website-policy.website-policy': ApiWebsitePolicyWebsitePolicy;
       'api::work-with-us-page.work-with-us-page': ApiWorkWithUsPageWorkWithUsPage;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;

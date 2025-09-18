@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "website_policies",
+  "info": {
+    "singularName": "website-policy",
+    "pluralName": "website-policies",
+    "displayName": "Website Policy",
+    "description": "Manage website policy pages like Privacy Policy, Accessibility, and Cookie Policy"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "pageType": {
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "accessibility",
+        "privacy-policy",
+        "cookie-policy"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "lastUpdated": {
+      "type": "datetime",
+      "required": true
+    },
+    "content": {
+      "type": "richtext",
+      "required": true
+    },
+    "metaDescription": {
+      "type": "text",
+      "maxLength": 160
+    }
+  }
+}
