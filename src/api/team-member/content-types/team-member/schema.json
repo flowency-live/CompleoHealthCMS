@@ -38,6 +38,11 @@
     "linkedin": {
       "type": "string",
       "required": false
+    },
+    "display_order": {
+      "type": "integer",
+      "required": false,
+      "default": 0
     }
   }
 }

@@ -1416,6 +1416,7 @@ export interface ApiTeamMemberTeamMember extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    display_order: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
     id_slug: Schema.Attribute.UID<'name'> & Schema.Attribute.Required;
     image: Schema.Attribute.Media<'images'>;
     linkedin: Schema.Attribute.String;
